@@ -10,6 +10,11 @@
 		regip=#{regip},
 		rdate=NOW();	
 	</insert>
-
+	
+	<select id="SELECT_BOARD_LIST" resultType="kr.co.board.vo.BoardVO">
+		SELECT * FROM `JSP_BOARD` 
+		WHERE parent=0 AND cate='free' 
+		ORDER BY rdate DESC;
+	</select>
 
 </mapper>
