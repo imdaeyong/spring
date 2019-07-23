@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.sql">
+	
+<!-- 	<insert id="INSERT_USER"> -->
+<!-- 		INSERT INTO `JSP_USER` SET -->
+<!-- 		uid=#{uid}, -->
+<!-- 		pass=PASSWORD(#{pass}), -->
+<!-- 		name=#{name}, -->
+<!-- 		nick=#{nick}, -->
+<!-- 		email=#{email}, -->
+<!-- 		hp=#{hp}, -->
+<!-- 		zip=#{zip}, -->
+<!-- 		addr1=#{addr1}, -->
+<!-- 		addr2=#{addr2}, -->
+<!-- 		regip=#{regip}, -->
+<!-- 		rdate=NOW();	 -->
+<!-- 	</insert> -->
+	
+<!-- 	<select id="SELECT_TERMS" resultType="kr.co.board.vo.TermsVO"> -->
+<!-- 		SELECT * FROM `JSP_TERMS`; -->
+	
+<!-- 	</select> -->
+	
+<!-- 	<select id="SELECT_CHECK_UID" resultType="int"> -->
+<!-- 		SELECT COUNT(uid) FROM `JSP_USER` WHERE uid=#{uid}; -->
+<!-- 	</select> -->
+
+<!-- 	<select id="SELECT_USER_LOGIN" resultType="kr.co.board.vo.UserVO"> -->
+<!-- 		SELECT * FROM `JSP_USER` WHERE uid=#{uid} AND pass=PASSWORD(#{pass});	    -->
+<!-- 	</select> -->
+</mapper>
