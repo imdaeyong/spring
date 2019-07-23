@@ -14,6 +14,7 @@ public class BoardServiceImpl implements BoardService{
 	@Inject
 	private BoardDAO dao;
 
+<<<<<<< HEAD
 	@Override
 	public void write(BoardVO vo) {
 		dao.write(vo);
@@ -93,6 +94,21 @@ public class BoardServiceImpl implements BoardService{
 		groupStartEnd[1] = groupEnd;
 		
 		return groupStartEnd;
+=======
+	
+	public void write(BoardVO vo) {
+		dao.write(vo);
+	}
+
+	public List<BoardVO> list() {
+		return dao.list();
+	}
+
+	public void modify() {
+	}
+
+	public void delete() {
+>>>>>>> refs/remotes/origin/master
 	}
 
 }

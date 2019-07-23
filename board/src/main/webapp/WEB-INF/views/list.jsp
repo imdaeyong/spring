@@ -25,6 +25,7 @@
 					</tr>
 					
 					<c:forEach var="vo" items="${boardList}">
+<<<<<<< HEAD
 						<tr>
 							<td>${count = count-1}</td>
 							<td><a href="/board/view?seq=${vo.seq}">${vo.title}</a>&nbsp;[${vo.comment}]</td>
@@ -50,6 +51,25 @@
 				<c:if test="${groupStartEnd[1]<pageEnd}">		
 					<a href="/board/list?pg=${groupStartEnd[1]+1}" class="next">다음</a>				
 				</c:if>
+=======
+					<tr>
+						<td>${vo.seq}</td>
+						<td><a href="#">${vo.title}</a>&nbsp;[${vo.comment}]</td>
+						<td>${vo.uid}</td>
+						<td>${vo.rdate.substring(2,10)}</td>
+						<td>${vo.hit}</td>
+					</c:forEach>
+					
+					</tr>
+				</table>
+			</div>
+			<!-- 페이징 -->
+			<nav class="paging">
+				<span> 
+				<a href="#" class="prev">이전</a>
+				<a href="#" class="num">1</a>
+				<a href="#" class="next">다음</a>
+>>>>>>> refs/remotes/origin/master
 				</span>
 			</nav>
 			<a href="/board/write" class="btnWrite">글쓰기</a>

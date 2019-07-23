@@ -6,6 +6,7 @@ import kr.co.board.vo.BoardVO;
 
 public interface BoardService {
 
+<<<<<<< HEAD
 	//데이터 액세스 메서드
 	public void write(BoardVO vo);
 	public List<BoardVO> list(int start);
@@ -20,4 +21,11 @@ public interface BoardService {
 	public int getPageCountStart(int total, int limit);
 	public int[] getPageGroupStartEnd(String pg,int pageEnd);
 		
+=======
+	public void write(BoardVO vo);
+	public List<BoardVO> list();
+	public void modify();
+	public void delete();
+
+>>>>>>> refs/remotes/origin/master
 }

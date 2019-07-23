@@ -22,6 +22,7 @@ public class BoardController {
 	private BoardService service;
 	   
 	@RequestMapping("/list")
+<<<<<<< HEAD
 	public String list(Model model,String pg) {
 		//pg가 null이면 오류가 뜰수도 있으니까 디폴트값으로 1을 준다
 		
@@ -99,3 +100,35 @@ public class BoardController {
 	}
 }
 	
+=======
+	public String list(Model model) {
+		
+		List<BoardVO> boardList = service.list();
+		model.addAttribute("boardList",boardList);
+		
+		return "/list";
+	}
+	
+	@RequestMapping("/view")
+	public String view() {
+		return "/view";
+	}
+	
+	@RequestMapping(value="/write",method=RequestMethod.GET)
+	public String write() {
+		return "/write";
+	}
+	@RequestMapping(value="/write",method=RequestMethod.POST)
+	public String write(BoardVO vo,HttpSession sess, HttpServletRequest req) {
+		
+		UserVO user= (UserVO)sess.getAttribute("user");
+				
+		vo.setUid(user.getUid());
+		vo.setRegip(req.getRemoteAddr());
+		
+		service.write(vo);
+		
+		return "redirect:/list";
+	}   
+}
+>>>>>>> refs/remotes/origin/master

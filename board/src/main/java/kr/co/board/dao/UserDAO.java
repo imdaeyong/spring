@@ -28,5 +28,13 @@ public class UserDAO {
    
    public int checkUid(String uid) {
 	  return mybatis.selectOne("mapper.sql.SELECT_CHECK_UID", uid);	   
+<<<<<<< HEAD
    }   
+=======
+   }
+
+
+   
+   
+>>>>>>> refs/remotes/origin/master
 }

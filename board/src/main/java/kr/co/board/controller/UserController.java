@@ -50,6 +50,7 @@ public class UserController {
 	   sess.invalidate();
 	   return "redirect:/user/login";
    }
+<<<<<<< HEAD
       
    @RequestMapping(value="/user/register", method=RequestMethod.GET)
    public String register() {
@@ -87,4 +88,47 @@ public class UserController {
       
       return map;
    }   
+=======
+   
+   
+   
+   @RequestMapping(value="/user/register", method=RequestMethod.GET)
+   public String register() {
+      return "/user/register";
+   }
+   
+   @RequestMapping(value="/user/register", method=RequestMethod.POST)
+   public String register(UserVO vo, HttpServletRequest req) {
+      
+      vo.setRegip(req.getRemoteAddr());
+      
+      service.register(vo);
+      
+      return "redirect:/user/login";
+   }
+   
+   @RequestMapping("/user/terms")
+   public String terms(Model model) {
+      
+      TermsVO vo = service.terms();
+      
+      model.addAttribute("vo", vo);
+      
+      return "/user/terms";
+   }
+
+   @RequestMapping(value="/user/checkUid")
+   @ResponseBody
+   public Map<String, Integer> checkUid(String uid) {
+      
+      int result = service.checkUid(uid);
+      
+      Map<String, Integer> map = new HashMap<String, Integer>();
+      map.put("result", result);
+      
+      return map;
+   }
+   
+   
+>>>>>>> refs/remotes/origin/master
 }

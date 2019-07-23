@@ -19,6 +19,7 @@ public class BoardDAO {
 		mybatis.insert("mapper.board.INSERT_BOARD",vo);
 	}
 
+<<<<<<< HEAD
 	public List<BoardVO> list(int start) {
 		return mybatis.selectList("mapper.board.SELECT_BOARD_LIST",start);
 	}
@@ -40,4 +41,19 @@ public class BoardDAO {
 	public int getTotalCount() {
 		return mybatis.selectOne("mapper.board.SELECT_TOTAL_COUNT");
 	}	
+=======
+	public List<BoardVO> list() {
+		return mybatis.selectList("mapper.board.SELECT_BOARD_LIST");
+	}
+
+
+	public void modify() {
+	}
+
+
+	public void delete() {
+	}
+
+	
+>>>>>>> refs/remotes/origin/master
 }

@@ -14,6 +14,7 @@
 	<select id="SELECT_BOARD_LIST" resultType="kr.co.board.vo.BoardVO">
 		SELECT * FROM `JSP_BOARD` 
 		WHERE parent=0 AND cate='free' 
+<<<<<<< HEAD
 		ORDER BY rdate DESC
 		LIMIT #{start}, 10;
 	</select>
@@ -36,4 +37,9 @@
 		WHERE parent=0 AND cate='free';
 	</select>
 	
+=======
+		ORDER BY rdate DESC;
+	</select>
+
+>>>>>>> refs/remotes/origin/master
 </mapper>
